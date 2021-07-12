@@ -8,6 +8,4 @@ edition = "2018"
 [dependencies]
 
 rune-core = { git = "https://github.com/hotg-ai/rune", version = "0.4.0-dev" }
-
-
 rune-proc-blocks = { git = "https://github.com/hotg-ai/rune", version = "0.4.0-dev" }

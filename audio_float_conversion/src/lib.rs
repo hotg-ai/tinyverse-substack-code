@@ -2,7 +2,7 @@
 
 extern crate alloc;
 
-use rune_core::{Tensor};
+use rune_core::{Tensor, HasOutputs};
 use rune_proc_blocks::{ProcBlock, Transform};
 
 
@@ -49,6 +49,26 @@ impl Transform<Tensor<i16>> for AudioFloatConversion {
     }
 
 }
+
+impl HasOutputs for AudioFloatConversion {
+
+        fn set_output_dimensions(&mut self, dimensions: &[usize]) {
+    
+            assert_eq!(
+    
+                dimensions.len(),
+    
+                1,
+    
+                "This proc block only supports 1D outputs (requested output: {:?})",
+    
+                dimensions
+    
+            );
+    
+        }
+    
+    }
 
 #[cfg(test)]
 mod tests {
