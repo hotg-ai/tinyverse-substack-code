@@ -1,0 +1,13 @@
+[package]
+name = "audio_float_conversion"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+rune-core = { git = "https://github.com/hotg-ai/rune", version = "0.4.0-dev" }
+
+
+rune-proc-blocks = { git = "https://github.com/hotg-ai/rune", version = "0.4.0-dev" }
